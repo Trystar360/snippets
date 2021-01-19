@@ -1,0 +1,78 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	
+
+		"Class Name": {
+		"scope": "javascript",
+		"prefix": "cn",
+		"body": [
+			"className={${1:classes}.$2}$0"
+		],
+		"description": "Gives object a Class name"
+	},
+	"Initialize new component": {
+		"scope": "javascript",
+		"prefix": "anewcl",
+		"body": [
+			"import React from 'react';",
+			"",
+			"const ${1:componentId} = () => (",
+			"   $0",
+			")",
+			"",
+			"export default ${1:componentId};"
+		],
+		"description": "Sets up document for creating a new ReactJS Component"
+	},
+	"Import Component from Material-ui Core":{
+		"scope": "javascript",
+		"prefix": "imcore",
+		"body": [
+			"import $1 from '@material-ui/core/$1';",
+			"$0"
+		],
+		"description": "Imports Component from mui core"
+	},
+	"New React": {
+        "prefix": "Zcomp",
+        "body": [
+            "import React from 'react';\r",
+            "import { makeStyles } from '@material-ui/core/styles';\r",
+            "import {} from \"@material-ui/core/\";\r",
+            "\r",
+            "const useStyles = makeStyles((theme) => ({\r",
+            "    root: {\r",
+            "\r",
+            "    }\r",
+            "  }));\r",
+            "\r",
+            "export default function ${1:${TM_FILENAME_BASE}}(){\r",
+            "    const classes = useStyles();\r",
+            "\r",
+            "    return(\r",
+            "        <div className={classes.root}>\r",
+            "                  \r$0",
+            "        </div>\r",
+            "    );\r",
+            "};"
+        ],
+        "description": "React component bones"
+    }
+
+}
